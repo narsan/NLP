@@ -42,17 +42,11 @@ def probabilities(address, wordDict_unigram, wordDict_bigram, word_unigram_proba
     for word, count in wordDict_bigram.most_common():
         word_bigram_probability.update({word: count / total_num_words})
 
-    # print(wordDict_unigram.most_common()[0])
-    # print(list(word_unigram_probability.values())[0])
-    # print(wordDict_bigram.most_common()[0])
-    # print(list(word_bigram_probability.values())[0])
-    # return wordDict_unigram , wordDict_bigram , word_unigram_probability , word_bigram_probability
 
 
 hafez_word_count = number_of_words_poet(hafez_address)
 ferdowsi_word_count = number_of_words_poet(ferdowsi_address)
 molavi_word_count = number_of_words_poet(molavi_address)
-# print(hafez_word_count , ferdowsi_word_count , molavi_word_count)
 
 probabilities(hafez_address, wordDict_unigram_hafez, wordDict_bigram_hafez, word_unigram_Probability_hafez,
               word_bigram_Probability_hafez, hafez_word_count)
